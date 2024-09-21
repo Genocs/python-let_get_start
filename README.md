@@ -1,2 +1,73 @@
-# python-llm
-The python machine learning and artificial intelligence repository
+# 📖 Python Course
+
+
+## Overview
+This project is a Python course that teaches users how to start coding in Python. 
+The course is designed to help users learn Python from scratch, and it covers the following topics:
+
+- Poetry integration for python dependency handler
+- Python Web Server with FastAPI and Uvicorn
+- Python Machine Learning
+    - Langchain
+    - Scikit-learn
+- Python Data Science
+
+
+## Getting Started
+Before you begin, ensure you have the following software installed and provisioned:
+- [Docker](https://www.docker.com/)
+- [Python](https://www.python.org/downloads/)
+- [Poetry](https://python-poetry.org/docs/)
+
+**Docker** is a platform that enables developers to build, package, ship, and run applications in containers. Containers allow a developer to package up an application with all parts it needs, such as libraries and other dependencies, and ship it all out as one package.
+
+**Python** is a programming language that is actively developed and has a large community. It is used for web development (server-side), software development, mathematics, system scripting, data analysis, artificial intelligence, and scientific computing.
+
+**Poetry** is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
+
+
+## Setup
+To initialize the project, you'll need to create a `.env` file at the root of the project. This file should contain all of the environment variables required by the project. Use the `.env.example` file as a template.
+
+
+
+## 💻 Running Locally
+
+
+1. Install dependencies with [Poetry](https://python-poetry.org/) and activate virtual environment🔨
+
+    If you don't have poetry installed, you can install it with `pip install     poetry`.
+    Add `poetry` to your path.
+    
+    ```bash
+    # To check if poetry is installed [Tested with 1.6.1]
+    poetry --version
+   
+    # To reevaluate the dependencies
+    poetry lock
+    
+    # To install the dependencies
+    poetry install --no-root
+    
+    # Setup the environment variables
+    mv .env.example .env
+    
+    # To activate the virtual environment
+    poetry shell
+    ```
+
+2. Select the chapter 
+
+    ```bash
+    cd ./10-web-uvicorn/src
+    pip install -r ./requirements.txt
+    uvicorn app.main:app --reload
+    ```
+
+
+## 💻 Running with Docker
+
+To run the project with docker, execute the following command:
+```bash
+docker-compose up
+```
