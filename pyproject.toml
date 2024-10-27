@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "python course"
 version = "0.0.1"
-description = "A python App with Docker Deployments"
+description = "python app with Docker deployments"
 authors = ["Nocco Giovanni Emanuele"]
 license = "MIT"
 readme = "README.md"
@@ -9,10 +9,10 @@ packages = [{include = "python_llm_template"}]
 
 [tool.poetry.dependencies]
 python = "3.11.9"
-uvicorn = "0.30.6"
-fastapi = "0.115.0"
+uvicorn = "0.32.0"
+fastapi = "0.115.3"
 pydantic = "2.9.2"
-pydantic-settings = "2.5.2"
+pydantic-settings = "2.6.0"
 
 [build-system]
 requires = ["poetry-core"]

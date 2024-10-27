@@ -26,6 +26,7 @@ def get_settings():
 
 
 settings = get_settings()
+settings.set_env_vars()
 
 app = FastAPI(title=settings.app_name,
               description=settings.app_description,
@@ -52,7 +53,7 @@ async def ping():
     """
     Health check endpoint    
     """
-    log.info(os.getenv("AZURE_OPENAI_API_KEY"))
+    log.info(os.getenv("AZURE_OPENAI_MODEL"))
     log.debug("Health check")
     return {"status": "Ok"}
 
@@ -63,7 +64,8 @@ async def info(info_settings: Annotated[Settings, Depends(get_settings)]):
         "app_name": info_settings.app_name,
         "app_description": info_settings.app_description,
         "app_version": info_settings.app_version,
-        "admin_email": info_settings.admin_email
+        "admin_email": info_settings.admin_email,
+        "azure_openai_model": info_settings.azure_openai_model
     }
 
 
