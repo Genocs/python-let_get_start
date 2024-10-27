@@ -16,15 +16,41 @@ The course is designed to help users learn Python from scratch, and it covers th
 
 Before you begin, ensure you have the following software installed and provisioned:
 
-- [Docker](https://www.docker.com/)
 - [Python](https://www.python.org/downloads/)
 - [Poetry](https://python-poetry.org/docs/)
+- [Conda](https://docs.conda.io/en/latest/)
+- [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/)
+- [FastAPI](https://fastapi.tiangolo.com/)
 
-**Docker** is a platform that enables developers to build, package, ship, and run applications in containers. Containers allow a developer to package up an application with all parts it needs, such as libraries and other dependencies, and ship it all out as one package.
 
 **Python** is a programming language that is actively developed and has a large community. It is used for web development (server-side), software development, mathematics, system scripting, data analysis, artificial intelligence, and scientific computing.
 
 **Poetry** is a tool for dependency management and packaging in Python. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
+
+**Conda** is an open-source package management system and environment management system that runs on Windows, macOS, and Linux. Conda quickly installs, runs, and updates packages and their dependencies.
+
+**Docker** is a platform that enables developers to build, package, ship, and run applications in containers. Containers allow a developer to package up an application with all parts it needs, such as libraries and other dependencies, and ship it all out as one package.
+
+**Docker Compose** is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application's services. Then, with a single command, you create and start all the services from your configuration.
+
+**FastAPI** is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints. It is designed to be easy to use and learn, and it is built on top of Starlette for the web parts and Pydantic for the data parts.
+
+## 📚 Course Structure
+
+The course is divided into chapters, and each chapter covers a specific topic. The chapters are as follows:
+- [Chapter 1: Python Basics](./01-python-basics)
+- [Chapter 2: Python Functions](./02-python-functions)
+- [Chapter 3: Python Data Structures](./03-python-data-structures)
+- [Chapter 4: Python Classes](./04-python-classes)
+- [Chapter 5: Python Modules](./05-python-modules)
+- [Chapter 6: Python Packages](./06-python-packages)
+- [Chapter 7: Python Testing](./07-python-testing)
+- [Chapter 8: Python Web Server](./08-python-web-server)
+- [Chapter 9: Python Machine Learning](./09-python-machine-learning)
+- [Chapter 10: Python Data Science](./10-python-data-science)
+
+
 
 ## Setup
 
