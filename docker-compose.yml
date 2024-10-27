@@ -1,0 +1,20 @@
+services:
+  uvicorn-webpi:
+    image: genocs/uvicorn-webpi:1.0.0
+    ports:
+      - 8000:8000
+
+    networks:
+      - genocs
+    # network_mode: host
+    volumes:
+      - uvicorn:/root
+
+networks:
+  genocs:
+    name: genocs-network
+    external: true
+
+volumes:
+  scraping:
+    driver: local
