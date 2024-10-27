@@ -1,13 +1,13 @@
-# routes.py
+# routes/main.py
 
 from fastapi import APIRouter, HTTPException
 
-from app.models.transform import TransformRequest
+from app.models.transform import TransformRequest, TransformResponse
 
 router = APIRouter()
 
 
-@router.post("/transform")
+@router.post("/transform", response_model=TransformResponse)
 async def transform_code(req: TransformRequest):
     """
     Transform the code using the selected transformer.

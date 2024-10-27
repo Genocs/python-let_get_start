@@ -15,16 +15,21 @@ from app.settings import Settings
 from app.routes.main import router as main_router
 
 # Set up logging
-logging.basicConfig(level=logging.DEBUG, style='{', format='{levelname}: {asctime} -{name}: {message}')
+logging.basicConfig(level=logging.DEBUG,
+                    style='{', format='{levelname}: {asctime} -{name}: {message}')
 log = logging.getLogger("gnx-app")
+
 
 @lru_cache
 def get_settings():
     return Settings()
 
+
 settings = get_settings()
 
-app = FastAPI(title=settings.app_name, description=settings.app_description, version=settings.app_version)
+app = FastAPI(title=settings.app_name,
+              description=settings.app_description,
+              version=settings.app_version)
 
 # CORS
 origins = ["*"]
@@ -39,7 +44,7 @@ app.add_middleware(
 )
 
 # Include routers
-app.include_router(main_router)
+app.include_router(main_router, prefix="/api/v1/main", tags=["main"])
 
 
 @app.get("/health")
@@ -47,7 +52,7 @@ async def ping():
     """
     Health check endpoint    
     """
-    log.info(os.getenv("AZURE_OPENAI_API_KEY"))   
+    log.info(os.getenv("AZURE_OPENAI_API_KEY"))
     log.debug("Health check")
     return {"status": "Ok"}
 

@@ -158,3 +158,5 @@ token.json
 # Private data
 company_description.*
 .chainlit/.langchain.db
+
+.env

@@ -64,6 +64,16 @@ To initialize the project, you'll need to create a `.env` file at the root of th
     uvicorn app.main:app --reload
     ```
 
+3. Display the API documentation 
+
+    - Open the following links in your browser to view the API documentation by using ReDoc
+
+        - [ReDoc](http://127.0.0.1:8000)
+
+    - Open the following links in your browser to view the API documentation by using the Swagger UI
+
+        - [Swagger UI](http://127.0.0.1:8000/docs)
+
 
 ## 💻 Running with Docker
 
