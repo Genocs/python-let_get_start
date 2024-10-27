@@ -81,6 +81,18 @@ To initialize the project, you'll need to create a `.env` file at the root of th
 
 To run the project with docker, execute the following command:
 
+
 ```bash
+#docker build
+docker build -t python-course ./10-web-uvicorn/.
+
+# Run the docker container
+docker run -d -p 8000:8000 python-course
+
+```
+
+
+```bash
+```
 docker-compose up
 ```
