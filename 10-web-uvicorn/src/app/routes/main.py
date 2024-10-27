@@ -14,7 +14,7 @@ router = APIRouter()
 async def transform_code(req: TransformRequest):
     """
     Summary:
-    Transform the code using the selected transformer dd.
+    Transform the code using the selected transformer.
     Description:
     Transform the code using the selected transformer.
     Parameters:

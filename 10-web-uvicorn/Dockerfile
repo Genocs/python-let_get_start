@@ -1,30 +1,14 @@
-# syntax=docker/dockerfile:1
-FROM docker.io/continuumio/miniconda3:latest
-
-WORKDIR /
-
-COPY ./requirements.txt /requirements.txt
-
-# gcc is for build psutil in MacOS
-RUN apt-get update && apt-get install -y runit gcc
-
-# create conda environment
-RUN conda create -n uvicorn-serve python=3.11.9 pip=23.3.1 -q -y && \
-    conda run -n uvicorn-serve \
-    pip install -r /requirements.txt && \
-    conda run -n uvicorn-serve pip cache purge && \
-    conda clean -a -y
-
-COPY ./src /src
+FROM python:3.11
 
 EXPOSE 8000
 
-# reset runsvdir
-RUN rm -rf /var/runit
-COPY ./runit /var/runit
+WORKDIR /code
 
-# grant permission
-RUN chmod -R +x /var/runit
+COPY ./requirements.txt /code/requirements.txt
 
-COPY ./start.sh /
-CMD ["bash", "./start.sh"]
+RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+
+COPY ./src/app /code/app
+
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -5,12 +5,25 @@
 This project is a Python course that teaches users how to start coding in Python.
 The course is designed to help users learn Python from scratch, and it covers the following topics:
 
-- Poetry integration for python dependency handler
-- Python Web Server with FastAPI and Uvicorn
-- Python Machine Learning
-  - Langchain
-  - Scikit-learn
-- Python Data Science
+- **python**
+  - basics (variables, data types, operators, etc.)
+  - functions (functions, lambda functions, etc.)
+  - data structures (lists, tuples, dictionaries, sets, etc.)
+  - classes (classes, objects, inheritance, etc.)
+- **Poetry** integration for python dependency handler
+- **Conda** integration for python environment management
+- python Web Server with **FastAPI** and **Uvicorn**
+- python DS (Data Science):
+  - **Pandas**
+  - **Numpy**
+  - **Matplotlib**
+  - **Seaborn**
+  - **Jupyter**
+  - **Scikit-learn**
+- python LLM (Large Language Model):
+  - **Promptflow**
+  - **Langchain**
+  - **Autogen**
 
 ## Getting Started
 
@@ -22,7 +35,6 @@ Before you begin, ensure you have the following software installed and provision
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 - [FastAPI](https://fastapi.tiangolo.com/)
-
 
 **Python** is a programming language that is actively developed and has a large community. It is used for web development (server-side), software development, mathematics, system scripting, data analysis, artificial intelligence, and scientific computing.
 
@@ -39,6 +51,7 @@ Before you begin, ensure you have the following software installed and provision
 ## 📚 Course Structure
 
 The course is divided into chapters, and each chapter covers a specific topic. The chapters are as follows:
+
 - [Chapter 1: Python Basics](./01-python-basics)
 - [Chapter 2: Python Functions](./02-python-functions)
 - [Chapter 3: Python Data Structures](./03-python-data-structures)
@@ -50,7 +63,20 @@ The course is divided into chapters, and each chapter covers a specific topic. T
 - [Chapter 9: Python Machine Learning](./09-python-machine-learning)
 - [Chapter 10: Python Data Science](./10-python-data-science)
 
+## List of libraries used in the project
 
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Uvicorn](https://www.uvicorn.org/)
+- [Pydantic](https://pydantic-docs.helpmanual.io/)
+- [Pandas](https://pandas.pydata.org/)
+- [Numpy](https://numpy.org/)
+- [Scikit-learn](https://scikit-learn.org/stable/)
+- [Matplotlib](https://matplotlib.org/)
+- [Seaborn](https://seaborn.pydata.org/)
+- [Jupyter](https://jupyter.org/)
+- [Promptflow](https://microsoft.github.io/promptflow/)
+- [Langchain](https://langchain.com/)
+- [Autogen](https://microsoft.github.io/autogen/)
 
 ## Setup
 
@@ -96,7 +122,7 @@ To initialize the project, you'll need to create a `.env` file at the root of th
 6. Display the API documentation
 
    - Open the following links in your browser to view the API documentation by using ReDoc
-   
+
      - [ReDoc](http://127.0.0.1:8000)
 
    - Open the following links in your browser to view the API documentation by using the Swagger UI
@@ -107,18 +133,14 @@ To initialize the project, you'll need to create a `.env` file at the root of th
 
 To run the project with docker, execute the following command:
 
-
 ```bash
 #docker build
-docker build -t python-course ./10-web-uvicorn/.
+docker build -t web-uvicorn ./10-web-uvicorn/.
 
-# Run the docker container
-docker run -d -p 8000:8000 python-course
-
+# Run the docker container with container name and port mapping
+docker run -d --name web-uvicorn_01 -p 8200:8000 web-uvicorn
 ```
-
 
 ```bash
-```
 docker-compose up
 ```
