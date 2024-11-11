@@ -1,18 +1,18 @@
 [tool.poetry]
-name = "python course"
+name = "langchain crash course"
 version = "0.0.1"
-description = "python app with Docker deployments"
+description = "A langchain crash course"
 authors = ["Nocco Giovanni Emanuele <giovanni.nocco@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "python_llm_template"}]
+packages = [{include = "langchain_crash_course"}]
+
 
 [tool.poetry.dependencies]
-python = "3.11.9"
-uvicorn = "0.32.0"
-fastapi = "0.115.3"
-pydantic = "2.9.2"
-pydantic-settings = "2.6.0"
+python = ">=3.10.0,<3.12"
+langchain = "0.3.4"
+langchain-openai = "^0.1.8"
+langchain-community = "^0.2.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

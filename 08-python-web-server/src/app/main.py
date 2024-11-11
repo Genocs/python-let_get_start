@@ -24,10 +24,11 @@ log = logging.getLogger("gnx-app")
 def get_settings():
     return Settings()
 
-
+# Get settings
 settings = get_settings()
 settings.set_env_vars()
 
+# Create FastAPI app
 app = FastAPI(title=settings.app_name,
               description=settings.app_description,
               version=settings.app_version)
