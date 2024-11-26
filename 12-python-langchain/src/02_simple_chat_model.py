@@ -1,5 +1,7 @@
-# Chat Model Documents: https://python.langchain.com/v0.2/docs/integrations/chat/
-# OpenAI Chat Model Documents: https://python.langchain.com/v0.2/docs/integrations/chat/openai/
+# Chat Model Documents: https://python.langchain.com/docs/integrations/chat/
+# OpenAI Chat Model Documents: https://python.langchain.com/docs/integrations/chat/openai/
+############################################################################################################
+# This script demonstrates how to create a simple chat model using the LangChain OpenAI Chat Model.
 
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
